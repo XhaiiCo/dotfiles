@@ -1,0 +1,33 @@
+{
+  "editor.cursorBlinking": "smooth",
+  "tabnine.experimentalAutoImports": true,
+  "editor.rulers": [],
+  "grunt.autoDetect": "on",
+  "editor.fontFamily": "'Cascadia Code', Fira Code",
+  "workbench.startupEditor": "none",
+  "code-runner.runInTerminal": true,
+  "terminal.integrated.gpuAcceleration": "off",
+  "vsicons.dontShowNewVersionMessage": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "jupyter.askForKernelRestart": false,
+  "php.suggest.basic": false,
+  "editor.formatOnSave": true,
+  "emmet.includeLanguages": {
+    "php": "html"
+  },
+  "bracketPairColorizer.depreciation-notice": false,
+  "workbench.sideBar.location": "right",
+  "editor.cursorStyle": "block",
+  "diffEditor.wordWrap": "on",
+  "workbench.editor.decorations.colors": false,
+  "workbench.iconTheme": "bearded-icons",
+  "path-autocomplete.extensionOnImport": true,
+  "auto-close-tag.disableOnLanguage": [],
+  "editor.find.cursorMoveOnType": false,
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 3,
+  "editor.fontSize": 12,
+  "workbench.colorTheme": "Bearded Theme Will",
+  "workbench.colorCustomizations": {},
+  "editor.minimap.enabled": false
+}
