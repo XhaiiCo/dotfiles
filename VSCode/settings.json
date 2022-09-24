@@ -3,7 +3,6 @@
   "tabnine.experimentalAutoImports": true,
   "editor.rulers": [],
   "grunt.autoDetect": "on",
-  "editor.fontFamily": "'Cascadia Code', Fira Code",
   "workbench.startupEditor": "none",
   "code-runner.runInTerminal": true,
   "terminal.integrated.gpuAcceleration": "off",
@@ -15,7 +14,6 @@
   "emmet.includeLanguages": {
     "php": "html"
   },
-  "bracketPairColorizer.depreciation-notice": false,
   "workbench.sideBar.location": "right",
   "editor.cursorStyle": "block",
   "diffEditor.wordWrap": "on",
@@ -24,10 +22,37 @@
   "path-autocomplete.extensionOnImport": true,
   "auto-close-tag.disableOnLanguage": [],
   "editor.find.cursorMoveOnType": false,
-  "editor.fontLigatures": true,
-  "window.zoomLevel": 3,
-  "editor.fontSize": 12,
+  "window.zoomLevel": 2,
   "workbench.colorTheme": "Bearded Theme Will",
   "workbench.colorCustomizations": {},
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "cSpell.language": "en,fr",
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.normal": "block-outline",
+
+  // font settings
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.4,
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.fontWeightBold": "300",
+  "workbench.fontAliasing": "antialiased",
+  "editor.fontFamily": "'Cascadia Code', Fira Code",
+
+  //Vim
+  "vim.timeout": 200,
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+   {
+      "before": ["k", "j"],
+      "after": ["<Esc>", "l"]
+    }
+  ],
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-f>": true,
+    "<C-a>": false
+  },
 }
