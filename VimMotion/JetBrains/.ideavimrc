@@ -17,7 +17,8 @@ sethandler <C-C> a:ide
 sethandler <C-S> a:ide
 sethandler <C-V> a:ide
 sethandler <C-X> a:ide
-sethandler <C-b> a:ide
+sethandler <C-B> a:ide
+sethandler <C-E> a:ide
 
 " formatting
 nnoremap == :action ReformatCode <CR>
