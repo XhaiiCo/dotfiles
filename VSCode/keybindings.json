@@ -1,30 +1,26 @@
 [
-  {
-    "key": "alt+1",
-    "command": "multiCommand.makeRoom"
-  },
-  {
-    "key": "ctrl+shift+a",
-    "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.quickOpen"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion"
-  },
-  {
-    "key": "ctrl+shift+o",
-    "command": "revealFileInOS"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "editor.action.formatDocument"
-  }
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "revealFileInOS"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.formatDocument"
+    },
+    {
+        "key": "alt+f2",
+        "command": "toggleVim"
+    },
+    {
+        "key": "ctrl+f11",
+        "command": "workbench.action.toggleZenMode"
+    }
 ]
