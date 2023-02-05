@@ -7,3 +7,4 @@
 - Vim
 - ESLint
 - Path Autocomplete
+- Error lens
