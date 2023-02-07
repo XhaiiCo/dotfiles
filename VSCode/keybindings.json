@@ -1,26 +1,46 @@
 [
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion"
-    },
-    {
-        "key": "ctrl+shift+o",
-        "command": "revealFileInOS"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "editor.action.formatDocument"
-    },
-    {
-        "key": "alt+f2",
-        "command": "toggleVim"
-    },
-    {
-        "key": "ctrl+f11",
-        "command": "workbench.action.toggleZenMode"
-    }
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "revealFileInOS"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "editor.action.formatDocument"
+  },
+  {
+    "key": "alt+f2",
+    "command": "toggleVim"
+  },
+  {
+    "key": "ctrl+f11",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "angular.goToComponentWithTemplateFile"
+  }
 ]
