@@ -6,5 +6,5 @@
 - IntelliJ IDEA Keybindings
 - Vim
 - ESLint
-- Path Autocomplete
+- Path Intellisense
 - Error lens
