@@ -8,3 +8,4 @@
 - ESLint
 - Path Intellisense
 - Error lens
+- GitLens
