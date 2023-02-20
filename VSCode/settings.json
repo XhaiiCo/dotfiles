@@ -52,6 +52,12 @@
   "material-icon-theme.hidesExplorerArrows": true,
 
   // VIM
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.useSystemClipboard": true,
