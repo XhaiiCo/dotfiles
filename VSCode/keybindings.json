@@ -16,7 +16,7 @@
     "command": "editor.action.formatDocument"
   },
   {
-    "key": "alt+f2",
+    "key": "ctrl+f2",
     "command": "toggleVim"
   },
   {
@@ -46,6 +46,11 @@
   {
     "key": "shift+ctrl+e",
     "command": "workbench.view.explorer"
+  },
+  {
+    "key": "shift+ctrl+e",
+    "command": "workbench.action.closeSidebar",
+    "when": "explorerViewletVisible"
   },
   {
     "key": "r",
@@ -144,11 +149,6 @@
   {
     "key": "ctrl+j",
     "command": "-workbench.action.togglePanel"
-  },
-  {
-    "key": "shift+k",
-    "command": "editor.action.showHover",
-    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+k ctrl+i",
