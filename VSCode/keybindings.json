@@ -1,5 +1,9 @@
 [
   {
+    "key": "ctrl+y",
+    "command": "redo"
+  },
+  {
     "key": "ctrl+j",
     "command": "selectNextSuggestion"
   },
