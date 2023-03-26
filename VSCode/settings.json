@@ -106,8 +106,8 @@
   // ESLINT
   "eslint.enable": true,
   "eslint.format.enable": false,
-    // OTHER
-    "workbench.startupEditor": "none",
-    "git.confirmSync": false,
-    "window.menuBarVisibility": "compact",
+  // OTHER
+  "workbench.startupEditor": "none",
+  "git.confirmSync": false,
+  "window.menuBarVisibility": "compact",
 }
