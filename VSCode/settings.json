@@ -10,6 +10,9 @@
   "editor.cursorBlinking": "expand",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.scrollbar.verticalScrollbarSize": 10,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "all",
 
   // FONT
   "editor.fontSize": 15,
@@ -40,8 +43,11 @@
   // WORKBENCH
   "workbench.sideBar.location": "left",
   "workbench.tree.indent": 15,
-  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.renderIndentGuides": "none",
   "workbench.editor.enablePreview": false,
+  "workbench.activityBar.visible": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.showTabs": false,
 
   // STYLE
   "workbench.iconTheme": "eq-material-theme-icons",
@@ -49,7 +55,6 @@
 
   // EMMET
   "emmet.triggerExpansionOnTab": true,
-  "material-icon-theme.hidesExplorerArrows": true,
 
   // VIM
   "vim.insertModeKeyBindings": [
@@ -100,5 +105,9 @@
 
   // ESLINT
   "eslint.enable": true,
-  "eslint.format.enable": false
+  "eslint.format.enable": false,
+    // OTHER
+    "workbench.startupEditor": "none",
+    "git.confirmSync": false,
+    "window.menuBarVisibility": "compact",
 }
