@@ -14,7 +14,7 @@
             "name": ".NET MAUI Android",
             "type": "f5anything",
             "request": "launch",
-            "command": "dotnet build -t:Run -f net7.0-android",
+            "command": "dotnet build -t:Run -f net7.0-android",//"net7.0-android" replace by the targetFrameworks in .csproj
         },
     ]
 }
