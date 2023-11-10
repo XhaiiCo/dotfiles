@@ -13,6 +13,7 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "all",
+  "editor.mouseWheelZoom": true,
 
   // FONT
   "editor.fontSize": 15,
