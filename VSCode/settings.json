@@ -5,18 +5,18 @@
   "editor.formatOnSave": false,
   "editor.renderWhitespace": "trailing",
   "editor.linkedEditing": true,
-  "editor.occurrencesHighlight": true,
+  "editor.occurrencesHighlight": "singleFile",
   "editor.suggest.insertMode": "replace",
   "editor.cursorBlinking": "expand",
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.scrollbar.vertical": "hidden",
   "editor.overviewRulerBorder": false,
   "editor.renderLineHighlight": "all",
-  "editor.mouseWheelZoom": true,
+  "editor.lineNumbers": "relative",
+  "editor.stickyScroll.enabled": true,
 
   // FONT
-  "editor.fontSize": 15,
+  "editor.fontSize": 18,
   "editor.lineHeight": 1.6,
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
@@ -46,13 +46,13 @@
   "workbench.tree.indent": 15,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.editor.enablePreview": false,
-  "workbench.activityBar.visible": true,
-  "workbench.editor.tabCloseButton": "off",
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.activityBar.location": "top",
+  "workbench.editor.tabActionCloseVisibility": false,
 
   // STYLE
-  "workbench.iconTheme": "eq-material-theme-icons",
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.iconTheme": "bearded-icons",
 
   // EMMET
   "emmet.triggerExpansionOnTab": true,
@@ -67,9 +67,11 @@
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.useSystemClipboard": true,
-  "editor.lineNumbers": "on",
+  "vim.foldfix": true,
   "vim.ignorecase": true,
   "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.textColor": "white",
   "vim.handleKeys": {
     "<C-c>": false,
     "<C-v>": false,
@@ -107,8 +109,9 @@
   // ESLINT
   "eslint.enable": true,
   "eslint.format.enable": false,
+
   // OTHER
   "workbench.startupEditor": "none",
-  "git.confirmSync": false,
+  "git.confirmSync": true,
   "window.menuBarVisibility": "compact",
 }
