@@ -1,11 +1,16 @@
 # Main extensions
 
-- Material Theme
-- Material Theme Icons
+## Themes/Icons
+- Bearded Icons
+- Bearded Theme
+- Everforest
+
 - Prettier
+- ESLint
 - IntelliJ IDEA Keybindings
 - Vim
-- ESLint
 - Path Intellisense
 - Error lens
 - GitLens
+- Template string converter
+- Turbo Console Log
