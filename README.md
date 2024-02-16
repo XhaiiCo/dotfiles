@@ -1,9 +1,10 @@
 # dotfiles
 
+My personal configuration files
+
 based on:
 - https://github.com/craftzdog/dotfiles-public/tree/master?tab=readme-ov-file
 
-My personal configuration files
 
 ## PowerShell setup (Windows)
 - Command-line installer (scoop) : https://scoop.sh/
