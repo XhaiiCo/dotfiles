@@ -18,6 +18,8 @@ function opts.init()
   vim.opt.expandtab = true -- Use spaces instead of tabs
   vim.opt.smartindent = true -- Insert indents automatically
   vim.opt.winbar = "" -- Disable winbar
+  vim.opt.ignorecase = true -- Ignore case when searching
+  vim.opt.relativenumber = true -- Show relative line numbers
 end
 
 return opts
