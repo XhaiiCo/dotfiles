@@ -1,3 +1,5 @@
+-- Lightweight yet powerful formatter plugin for Neovim
+
 return {
   "stevearc/conform.nvim", -- Format plugin
   lazy = false,
@@ -10,6 +12,7 @@ return {
       javascriptreact = { { "eslint_c", "prettier" } },
       typescript = { { "eslint_c", "prettier" } },
       typescriptreact = { { "eslint_c", "prettier" } },
+      typescriptangular = { { "eslint_c", "prettier" } },
     },
     format_on_save = {
       quiet = true,

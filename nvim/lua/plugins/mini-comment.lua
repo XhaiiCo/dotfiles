@@ -1,3 +1,4 @@
+-- For commentating code
 return {
   "echasnovski/mini.comment",
   version = "*",

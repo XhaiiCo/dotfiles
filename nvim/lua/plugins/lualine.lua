@@ -1,3 +1,5 @@
+-- statusline below
+
 return {
   "nvim-lualine/lualine.nvim",
   commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
@@ -29,7 +31,7 @@ return {
         lualine_c = {},
         lualine_x = {},
         lualine_y = { lint_progress },
-        lualine_z = { "fileformat", "filetype" },
+        lualine_z = { "location", "fileformat", "filetype" },
       },
       inactive_sections = {
         lualine_a = {},

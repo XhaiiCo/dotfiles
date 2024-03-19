@@ -38,14 +38,14 @@ function keys.init()
   -- Tab
   vim.keymap.set("n", "<leader>tt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
   vim.keymap.set("n", "<leader>td", "<CMD>tabclose<CR>", { desc = "Close Tab", silent = true })
+  vim.keymap.set("n", "<leader>tr", "<CMD>TroubleToggle<CR>", { desc = "Toggle trouble", silent = true })
+  vim.keymap.set("n", "<leader>ta", "<CMD>TroubleToggle workspace_diagnostics<CR>",
+    { desc = "Toggle trouble global", silent = true })
+  vim.keymap.set("n", "<leader>tf", "<CMD>TroubleToggle quickfix<CR>", { desc = "Fix with trouble", silent = true })
   vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
   vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
   vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
   vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
-
-  -- Move lines
-  vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line up", silent = true })
-  vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down", silent = true })
 end
 
 return keys

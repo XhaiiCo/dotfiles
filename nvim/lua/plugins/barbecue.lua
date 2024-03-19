@@ -1,3 +1,4 @@
+-- Top bar with the path of the current file
 return {
   "utilyre/barbecue.nvim",
   version = "1.2.0",
