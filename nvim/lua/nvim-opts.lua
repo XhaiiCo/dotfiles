@@ -20,6 +20,7 @@ function opts.init()
   vim.opt.winbar = "" -- Disable winbar
   vim.opt.ignorecase = true -- Ignore case when searching
   vim.opt.relativenumber = true -- Show relative line numbers
+  vim.opt.clipboard = "unnamedplus" -- Use system clipboard
 end
 
 return opts

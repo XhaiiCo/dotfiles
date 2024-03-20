@@ -20,19 +20,22 @@ return {
       "pyright",
       "tsserver",
       "volar",
-      "csharp_ls"
+      "csharp_ls",
+      "angularls",
     }
 
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = servers_list,
     })
-    -- require 'lspconfig'.csharp_ls.setup {}
 
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lsp_config = require("lspconfig")
+
+    require 'lspconfig'.csharp_ls.setup {}
+    require 'lspconfig'.angularls.setup {}
 
     -- Completion engine setup
     cmp.setup({
