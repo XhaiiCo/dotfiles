@@ -3,7 +3,7 @@ return {
   version = "*",
   opts = {},
   keys = {
-    { "<leader>hw", "<CMD>HopWord<CR>", desc = "HopWord" },
+    { "<leader>h", "<CMD>HopWord<CR>", desc = "HopWord" },
   },
   config = function()
     local hop = require('hop')
