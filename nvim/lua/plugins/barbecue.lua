@@ -8,4 +8,9 @@ return {
   opts = {
     attach_navic = false,
   },
+  config = function()
+    require("barbecue").setup({
+      theme = "tokyonight-storm",
+    })
+  end
 }
