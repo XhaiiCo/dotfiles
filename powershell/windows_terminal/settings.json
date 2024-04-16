@@ -3,10 +3,6 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
-        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+j" },
-        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+h" },
-        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+l" },
-        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+k" },
         {
             "command": 
             {
@@ -16,8 +12,40 @@
             "keys": "ctrl+c"
         },
         {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+l"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+h"
+        },
+        {
             "command": "paste",
             "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+k"
         },
         {
             "command": "find",
@@ -34,14 +62,9 @@
         }
     ],
     "copyFormatting": "none",
-    "copyOnSelect": false,
+    "copyOnSelect": true,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
+    "focusFollowMouse": true,
     "profiles": 
     {
         "defaults": 
@@ -71,7 +94,9 @@
                 "hidden": false,
                 "icon": "C:\\Users\\david\\Pictures\\pp.png",
                 "name": "Windows PowerShell",
-                "opacity": 50,
+                "opacity": 100,
+                "scrollbarState": "hidden",
+                "padding": "0, 0, 0, -10",
                 "tabTitle": "DavidShell",
                 "useAcrylic": true
             },
@@ -86,6 +111,18 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{53cb163d-d32d-5a53-8f49-ea17f4597a51}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022 [Preview]",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{4d946637-b664-5b71-8866-6ca2ae75fbe8}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022 [Preview]",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -362,8 +399,7 @@
             },
             "window": 
             {
-                "applicationTheme": "dark",
-                "useMica": false
+                "applicationTheme": "dark"
             }
         }
     ],
