@@ -13,15 +13,13 @@ return {
     -- Default server
     local servers_list = {
       "cssls",
-      "dockerls",
       "html",
       "jsonls",
       "lua_ls",
-      "pyright",
       "tsserver",
-      "volar",
       "csharp_ls",
       "angularls",
+      "sqlls"
     }
 
     require("mason").setup()
