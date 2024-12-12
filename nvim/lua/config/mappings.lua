@@ -1,3 +1,4 @@
+-- LSP
 vim.keymap.set("n", "Q", vim.lsp.buf.hover, { desc = "Hover", buffer = buffer })
 vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { desc = "Go to type definition", buffer = buffer })
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = buffer })
@@ -9,6 +10,14 @@ vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent 
 
 -- Code action
 vim.keymap.set({ "v", "n" }, "ca", require("actions-preview").code_actions)
+
+-- goto preview
+vim.keymap.set('n', '<leader>pd', '<cmd>lua require("goto-preview").goto_preview_definition()<CR>',
+  { desc = "Preview Definition", silent = true })
+vim.keymap.set('n', '<leader>pi', '<cmd>lua require("goto-preview").goto_preview_type_definition()<CR>',
+  { desc = "Preview Implementation", silent = true })
+vim.keymap.set('n', '<leader>pc', '<cmd>lua require("goto-preview").close_all_win()<CR>',
+  { desc = "Close Previews", silent = true })
 
 -- Toggle maximizer
 vim.keymap.set("n", "<leader>m", "<CMD>MaximizerToggle<CR>", { desc = "Toggle maximizer" })
@@ -48,6 +57,12 @@ vim.keymap.set("n", "<leader>fo", function()
   })
 end, { silent = true })
 
+-- Trouble
+vim.keymap.set("n", "<leader>tr", "<CMD>TroubleToggle<CR>", { desc = "Toggle trouble", silent = true })
+vim.keymap.set("n", "<leader>ta", "<CMD>TroubleToggle workspace_diagnostics<CR>",
+  { desc = "Toggle trouble global", silent = true })
+vim.keymap.set("n", "<leader>tf", "<CMD>TroubleToggle quickfix<CR>", { desc = "Fix with trouble", silent = true })
+
 vim.keymap.set("n", "<up>", "<nop>", { silent = true })
 vim.keymap.set("n", "<down>", "<nop>", { silent = true })
 vim.keymap.set("n", "<left>", "<nop>", { silent = true })
@@ -75,17 +90,22 @@ vim.keymap.set("n", "<S-Left>", "<CMD>vertical resize -2<CR>", { desc = "Decreas
 vim.keymap.set("n", "<S-Right>", "<CMD>vertical resize +2<CR>", { desc = "Increase window width", silent = true })
 
 -- Others
-vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window", silent = true })
 vim.keymap.set("n", "<leader>wy", "<C-W>s", { desc = "Split window below", silent = true })
 vim.keymap.set("n", "<leader>wx", "<C-W>v", { desc = "Split window right", silent = true })
 
--- Tab
+-- Tab Default
+-- vim.keymap.set("n", "<leader>tt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
+-- vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
+-- vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
+-- vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
+-- vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
+
+-- Tab with barabar.nvim
 vim.keymap.set("n", "<leader>tt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
-vim.keymap.set("n", "<leader>tr", "<CMD>TroubleToggle<CR>", { desc = "Toggle trouble", silent = true })
-vim.keymap.set("n", "<leader>ta", "<CMD>TroubleToggle workspace_diagnostics<CR>",
-  { desc = "Toggle trouble global", silent = true })
-vim.keymap.set("n", "<leader>tf", "<CMD>TroubleToggle quickfix<CR>", { desc = "Fix with trouble", silent = true })
-vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
-vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
-vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
+vim.keymap.set("n", "<S-h>", "<cmd>BufferPrevious<cr>", { desc = "Prev buffer", silent = true })
+vim.keymap.set("n", "<S-l>", "<cmd>BufferNext<cr>", { desc = "Next buffer", silent = true })
+vim.keymap.set("n", "<S-j>", "<cmd>BufferMovePrevious<cr>", { desc = "Move tab to left", silent = true, noremap = true })
+vim.keymap.set("n", "<S-k>", "<cmd>BufferMoveNext<cr>", { desc = "Move tab to right", silent = true })
+vim.keymap.set("n", "<leader>tc", "<cmd>BufferClose<cr>", { desc = "Close buffer", silent = true })
+vim.keymap.set("n", "<leader>to", "<cmd>BufferCloseAllButCurrent<cr>", { desc = "Close other buffers", silent = true })
+vim.keymap.set("n", "<leader>tp", "<cmd>BufferPin<cr>", { desc = "Pin buffer", silent = true })

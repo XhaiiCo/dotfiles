@@ -17,7 +17,7 @@ return {
     ["<C-p>"] = "actions.preview",
     ["<C-c>"] = "actions.close",
     ["<C-r>"] = "actions.refresh",
-    ["<C-o>"] = "actions.open_external",
+    --["<C-o>"] = "actions.open_external",
     ["b"] = "actions.parent",
     ["_"] = "actions.open_cwd",
     ["`"] = "actions.cd",

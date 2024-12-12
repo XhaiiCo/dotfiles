@@ -67,4 +67,15 @@ return {
       })
     end,
   },
+  {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup()
+    end
+  },
+  {
+    "folke/trouble.nvim",
+    tag = "v2.10.0",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 }
