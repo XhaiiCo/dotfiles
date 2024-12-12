@@ -5,10 +5,11 @@ return function()
     "html",
     "jsonls",
     "lua_ls",
-    "ts_ls",
+    --"ts_ls",
     "csharp_ls",
     "angularls",
-    "sqlls"
+    "sqlls",
+    "remark_ls"
   }
 
   require("mason").setup()

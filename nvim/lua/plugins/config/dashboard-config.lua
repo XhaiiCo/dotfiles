@@ -17,11 +17,17 @@ return function()
         "                                                       ",
         "                                                       ",
       },
+      -- TODO
       center = {
         {
-          icon = "󰗼  ",
-          desc = "Quit Nvim                               ",
-          action = "qa",
+          -- icon = "󰗼  ",
+          -- desc = "Quit Nvim                               ",
+          -- action = "qa",
+          -- key = "q",
+
+          icon = "",
+          desc = "",
+          action = "",
           key = "q",
         },
       }

@@ -65,7 +65,7 @@ local catppuccin_config = {
       -- Trouble
       TroubleNormal = { bg = background_hightlight },
 
-      -- Telescope
+      --Telescope
       TelescopeBorder = { fg = catppuccin_hightlight },
       TelescopePromptTitle = { fg = background_hightlight, bg = catppuccin_hightlight },
       TelescopeResultsTitle = { fg = background_hightlight, bg = C.red },
