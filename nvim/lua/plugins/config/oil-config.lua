@@ -17,7 +17,7 @@ return {
     ["<C-p>"] = "actions.preview",
     ["<C-c>"] = "actions.close",
     ["<C-r>"] = "actions.refresh",
-    ["-"] = "actions.parent",
+    ["b"] = "actions.parent",
     ["_"] = "actions.open_cwd",
     ["`"] = "actions.cd",
     ["~"] = "actions.tcd",
@@ -26,6 +26,6 @@ return {
     ["g."] = "actions.toggle_hidden",
   },
   view_options = {
-    show_hidden = true,
+    show_hidden = false,
   },
 }

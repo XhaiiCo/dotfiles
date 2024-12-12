@@ -8,8 +8,7 @@ return function()
     --"ts_ls",
     "csharp_ls",
     "angularls",
-    "sqlls",
-    "remark_ls"
+    "sqlls"
   }
 
   require("mason").setup()

@@ -29,4 +29,7 @@ return {
       require("markview").setup(config)
     end,
   },
+  {
+    "szw/vim-maximizer"
+  }
 }

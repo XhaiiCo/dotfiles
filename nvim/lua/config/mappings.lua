@@ -1,9 +1,20 @@
+-- Toggle maximizer
+vim.keymap.set("n", "<leader>m", "<CMD>MaximizerToggle<CR>", { desc = "Toggle maximizer" })
+
+-- Toggle markview
+vim.keymap.set('n', '<leader>em', "<CMD>:Markview toggleAll<CR>", { desc = "Toggle Markview preview" })
+
 -- Format file
 vim.keymap.set("n", "<leader>F", "<CMD>lua require('conform').format({ lsp_fallback = true, async = true })<CR>",
   { desc = "Format code" })
+
 -- File explorer
-vim.keymap.set("n", "<leader>e", "<CMD>:Oil<CR>", { desc = "File explorer" })
+vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "File explorer" })
 vim.keymap.set("n", "<leader>d", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>td", "<CMD>tabnew | Oil<CR>", { desc = "Open Oil in new tab" })
+vim.keymap.set("n", "<leader>wdx", "<CMD>vsplit | Oil<CR>", { desc = "Split window vertically and open Oil" })
+vim.keymap.set("n", "<leader>wdy", "<CMD>split | Oil<CR>", { desc = "Split window horizontally and open Oil" })
+
 -- Lazygit
 vim.keymap.set("n", "<leader>gg", "<CMD>LazyGit<CR>", { desc = "Open LazyGit" })
 
@@ -58,7 +69,6 @@ vim.keymap.set("n", "<leader>wx", "<C-W>v", { desc = "Split window right", silen
 
 -- Tab
 vim.keymap.set("n", "<leader>tt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
-vim.keymap.set("n", "<leader>td", "<CMD>tabclose<CR>", { desc = "Close Tab", silent = true })
 vim.keymap.set("n", "<leader>tr", "<CMD>TroubleToggle<CR>", { desc = "Toggle trouble", silent = true })
 vim.keymap.set("n", "<leader>ta", "<CMD>TroubleToggle workspace_diagnostics<CR>",
   { desc = "Toggle trouble global", silent = true })
