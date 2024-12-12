@@ -5,7 +5,7 @@ return function()
     "html",
     "jsonls",
     "lua_ls",
-    --"ts_ls",
+    "tsserver",
     "csharp_ls",
     "angularls",
     "sqlls"
@@ -57,26 +57,6 @@ return function()
       source = true
     },
   })
-
-  -- Global key mapping
-  vim.keymap.set("n", "ge", vim.diagnostic.open_float, { desc = "open diagnostic popup" })
-  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
-  vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
-
-  -- Callback executed when a server is attached to a buffer
-  local on_attach_callback = function(client, buffer)
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration", buffer = buffer })
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition", buffer = buffer })
-    vim.keymap.set("n", "Q", vim.lsp.buf.hover, { desc = "Hover", buffer = buffer })
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation", buffer = buffer })
-    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename", buffer = buffer })
-    vim.keymap.set("n", "<leader>wl", function()
-      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, { desc = "List workspace folders", buffer = buffer })
-    vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { desc = "Go to type definition", buffer = buffer })
-    vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = buffer })
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Check references", buffer = buffer })
-  end
 
   for _, value in pairs(servers_list) do
     local server = lsp_config[value]
