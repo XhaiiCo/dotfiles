@@ -1,3 +1,6 @@
+-- Code action
+vim.keymap.set({ "v", "n" }, "ca", require("actions-preview").code_actions)
+
 -- Toggle maximizer
 vim.keymap.set("n", "<leader>m", "<CMD>MaximizerToggle<CR>", { desc = "Toggle maximizer" })
 
