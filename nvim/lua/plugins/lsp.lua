@@ -14,9 +14,6 @@ return {
   {
     "stevearc/conform.nvim", -- Format plugin
     lazy = false,
-    keys = {
-      { "<leader>F", '<CMD>lua require("conform").format({ lsp_fallback = true, async = true })<CR>', desc = "Format code" },
-    },
     opts = require("plugins.config.conform-config")
   }
 }

@@ -1,3 +1,30 @@
+-- Format file
+vim.keymap.set("n", "<leader>F", "<CMD>lua require('conform').format({ lsp_fallback = true, async = true })<CR>",
+  { desc = "Format code" })
+-- File explorer
+vim.keymap.set("n", "<leader>e", "<CMD>:Oil<CR>", { desc = "File explorer" })
+vim.keymap.set("n", "<leader>d", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- Lazygit
+vim.keymap.set("n", "<leader>gg", "<CMD>LazyGit<CR>", { desc = "Open LazyGit" })
+
+-- Telescope
+local builtin = require("telescope.builtin")
+
+vim.keymap.set("n", "<space>ff", builtin.find_files)
+vim.keymap.set("n", "<space>en", function()
+  builtin.find_files {
+    cwd = vim.fn.stdpath("config")
+  }
+end)
+vim.keymap.set("n", "<space>fg", builtin.live_grep)
+vim.keymap.set("n", "<space>fh", builtin.help_tags)
+vim.keymap.set("n", "<leader>fo", function()
+  builtin.live_grep({
+    grep_open_files = true,
+    prompt_title = "Live Grep in Open Files",
+  })
+end, { silent = true })
+
 vim.keymap.set("n", "<up>", "<nop>", { silent = true })
 vim.keymap.set("n", "<down>", "<nop>", { silent = true })
 vim.keymap.set("n", "<left>", "<nop>", { silent = true })

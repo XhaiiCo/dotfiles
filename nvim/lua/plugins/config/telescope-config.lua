@@ -1,5 +1,36 @@
 return function()
   require("telescope").setup {
+    defaults = {
+      borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+      file_ignore_patterns = {
+        ".git/*",
+        "node_modules/*",
+        "build",
+        "dist",
+        "yarn.lock",
+        ".mypy_cache/*",
+        "env/*",
+        "vendor/*",
+        "*/__pycache__/*",
+        "__pycache__",
+      },
+      prompt_prefix = "󰼛 ",
+      selection_caret = "󱞩 ",
+      layout_config = {
+        vertical = { width = 0.5 },
+        width = function(_, cols, _)
+          local min = 80
+          local max = 100
+          return math.min(math.max(min, cols), max)
+        end,
+        height = function(_, _, max_lines)
+          local percentage = 0.5
+          local min = 20
+          return math.max(math.floor(percentage * max_lines), min)
+        end,
+        preview_cutoff = 120,
+      },
+    },
     pickers = {
       find_files = {
         theme = "ivy"
@@ -9,21 +40,4 @@ return function()
       }
     }
   }
-
-  local builtin = require("telescope.builtin")
-
-  vim.keymap.set("n", "<space>ff", builtin.find_files)
-  vim.keymap.set("n", "<space>en", function()
-    builtin.find_files {
-      cwd = vim.fn.stdpath("config")
-    }
-  end)
-  vim.keymap.set("n", "<space>fg", builtin.live_grep)
-  vim.keymap.set("n", "<space>fh", builtin.help_tags)
-  vim.keymap.set("n", "<leader>fo", function()
-    builtin.live_grep({
-      grep_open_files = true,
-      prompt_title = "Live Grep in Open Files",
-    })
-  end, { silent = true })
 end
