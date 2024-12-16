@@ -11,6 +11,12 @@ vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent 
 -- Code action
 vim.keymap.set({ "v", "n" }, "ca", require("actions-preview").code_actions)
 
+-- Quickfix
+vim.keymap.set("n", "<M-j>", "<CMD>cnext<CR>", { desc = "Open quickfix" })
+vim.keymap.set("n", "<M-k>", "<CMD>cprev<CR>", { desc = "Open quickfix" })
+vim.keymap.set("n", "<M-q>", "<CMD>cclose<CR>", { desc = "Close quickfix" })
+
+
 -- goto preview
 vim.keymap.set('n', '<leader>pd', '<cmd>lua require("goto-preview").goto_preview_definition()<CR>',
   { desc = "Preview Definition", silent = true })
