@@ -1,5 +1,8 @@
 return function()
   require("telescope").setup {
+    -- extensions = {
+    --   fzf = {}
+    -- },
     defaults = {
       borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
       file_ignore_patterns = {
@@ -40,4 +43,5 @@ return function()
       }
     }
   }
+  --require("telescope").load_extension("fzf")
 end

@@ -109,3 +109,18 @@ vim.keymap.set("n", "<S-k>", "<cmd>BufferMoveNext<cr>", { desc = "Move tab to ri
 vim.keymap.set("n", "<leader>tc", "<cmd>BufferClose<cr>", { desc = "Close buffer", silent = true })
 vim.keymap.set("n", "<leader>to", "<cmd>BufferCloseAllButCurrent<cr>", { desc = "Close other buffers", silent = true })
 vim.keymap.set("n", "<leader>tp", "<cmd>BufferPin<cr>", { desc = "Pin buffer", silent = true })
+
+-- Term
+vim.api.nvim_set_keymap('t', '<C-q>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>st", function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 15)
+
+  job_id = vim.bo.channel
+end)
+
+vim.keymap.set("n", "<leader>tngs", function()
+  vim.fn.chansend(job_id, { "ng serve --open\r\n" })
+end)
