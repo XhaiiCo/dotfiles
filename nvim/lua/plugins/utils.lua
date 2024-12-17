@@ -7,6 +7,11 @@ return {
     end,
   },
   {
+    "folke/which-key.nvim", -- Load the which-key plugin
+    -- optional = true, -- This plugin is optional
+    opts = require("plugins.config.whichkey-config"),
+  },
+  {
     {
       "gelguy/wilder.nvim",
       dependencies = {
