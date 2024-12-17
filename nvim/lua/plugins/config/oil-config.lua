@@ -26,6 +26,24 @@ return {
     ["g."] = "actions.toggle_hidden",
   },
   view_options = {
-    show_hidden = false,
+    show_hidden = true,
+    is_always_hidden = function(name, _)
+      local hidden_dirs = {
+        "node_modules",
+        ".git",
+        ".vscode",
+        ".gitignore",
+        ".editorconfig",
+        ".."
+      }
+
+      for _, value in ipairs(hidden_dirs) do
+        if name == value then
+          return true
+        end
+      end
+
+      return false
+    end
   },
 }
