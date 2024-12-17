@@ -22,6 +22,18 @@ return {
     opts = {},
   },
   {
+    "folke/noice.nvim",
+    version = "4.2.1",
+    dependencies = {
+      "muniftanjim/nui.nvim",
+    },
+    config = function()
+      local config = require("plugins.config.noice-config")
+      local noice = require("noice")
+      noice.setup(config)
+    end,
+  },
+  {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "BufRead",
     config = function()
