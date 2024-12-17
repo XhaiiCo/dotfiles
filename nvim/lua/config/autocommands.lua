@@ -39,6 +39,9 @@ vim.cmd("hi! fg_lavender guifg=#A7ADE3")
 vim.cmd("hi! @markup.bold guifg=#ed8797")
 vim.cmd("hi! @markup.italic guifg=#88aaf1")
 
+-- Line numbers color
+vim.cmd("highlight LineNr guifg=#88aaf1")
+
 -- change background color for floating windows
 local modes = { "normal", "insert", "visual", "replace", "terminal", "command" }
 for _, mode in ipairs(modes) do

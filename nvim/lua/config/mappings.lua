@@ -107,21 +107,11 @@ vim.keymap.set("n", "<leader>wy", "<C-W>s", { desc = "Split window below", silen
 vim.keymap.set("n", "<leader>wx", "<C-W>v", { desc = "Split window right", silent = true })
 
 -- Tab Default
--- vim.keymap.set("n", "<leader>tt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
--- vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
--- vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
--- vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
--- vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
-
--- Tab with barabar.nvim
 vim.keymap.set("n", "<leader>tt", "<CMD>tabnew<CR>", { desc = "New Tab", silent = true })
-vim.keymap.set("n", "<S-h>", "<cmd>BufferPrevious<cr>", { desc = "Prev buffer", silent = true })
-vim.keymap.set("n", "<S-l>", "<cmd>BufferNext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<S-j>", "<cmd>BufferMovePrevious<cr>", { desc = "Move tab to left", silent = true, noremap = true })
-vim.keymap.set("n", "<S-k>", "<cmd>BufferMoveNext<cr>", { desc = "Move tab to right", silent = true })
-vim.keymap.set("n", "<leader>tc", "<cmd>BufferClose<cr>", { desc = "Close buffer", silent = true })
-vim.keymap.set("n", "<leader>to", "<cmd>BufferCloseAllButCurrent<cr>", { desc = "Close other buffers", silent = true })
-vim.keymap.set("n", "<leader>tp", "<cmd>BufferPin<cr>", { desc = "Pin buffer", silent = true })
+vim.keymap.set("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev buffer", silent = true })
+vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent = true })
+vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
+vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
 
 -- Term
 vim.api.nvim_set_keymap('t', '<C-q>', '<C-\\><C-n>', { noremap = true, silent = true })
