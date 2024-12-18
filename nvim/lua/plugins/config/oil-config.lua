@@ -30,6 +30,7 @@ return {
     is_always_hidden = function(name, _)
       local hidden_dirs = {
         "node_modules",
+        ".angular",
         ".git",
         ".vscode",
         ".gitignore",

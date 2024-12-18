@@ -12,22 +12,24 @@ return {
     },
     heading_2 = {
       style = "label",
-      sign = " ",
-      icon = " ",
+      sign = " ",
+      icon = " ",
       sign_hl = "col_2_fg",
       hl = "@markup.heading.2.markdown",
     },
     heading_3 = {
       style = "label",
-      sign = " ",
-      icon = " ",
+      -- sign = " ",
+      -- icon = " ",
+      sign = "󰄾 ",
+      icon = "󰄾 ",
       sign_hl = "col_1_fg",
       hl = "@markup.heading.3.markdown",
     },
     heading_4 = {
       style = "label",
-      sign = " ",
-      icon = " ",
+      sign = " ",
+      icon = " ",
       sign_hl = "col_1_fg",
       hl = "@markup.heading.4.markdown",
     },
@@ -301,12 +303,19 @@ return {
       text = " ",
       hl = "fg_yellow",
     },
-    custom = { {
-      match_string = "~",
-      text = "󰪢 ",
-      hl = "fg_red",
-      scope_hl = nil,
-    } },
+    custom = {
+      {
+        match_string = "p",
+        text = " ",
+        hl = "fg_yellow",
+      },
+      {
+        match_string = "~",
+        text = "󰪢 ",
+        hl = "fg_red",
+        scope_hl = nil,
+      }
+    },
   },
   callbacks = {
     on_enable = function(_, win)

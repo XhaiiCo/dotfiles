@@ -26,10 +26,10 @@ vim.cmd("sign define DiagnosticSignWarn text= texthl=TextWarn linehl= numhl="
 
 vim.cmd("hi! @markup.heading.1.markdown guifg=#8bd5cb")
 vim.cmd("hi! @markup.heading.2.markdown guifg=#88aaf1 ")
-vim.cmd("hi! @markup.heading.3.markdown guifg=#f5a980 ")
-vim.cmd("hi! @markup.heading.4.markdown guifg=#eed4a0 ")
-vim.cmd("hi! @markup.heading.5.markdown guifg=#edb6df ")
-vim.cmd("hi! @markup.heading.6.markdown guifg=#c6a0f7 ")
+vim.cmd("hi! @markup.heading.3.markdown guifg=#edb6df ")
+vim.cmd("hi! @markup.heading.4.markdown guifg=#c6a0f7 ")
+vim.cmd("hi! @markup.heading.5.markdown guifg=#f5a980 ")
+vim.cmd("hi! @markup.heading.6.markdown guifg=#eed4a0 ")
 --
 vim.cmd("hi! fg_yellow guifg=#eed4a0 ")
 vim.cmd("hi! fg_red guifg=#ed8797 ")
