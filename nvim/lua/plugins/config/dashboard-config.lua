@@ -47,14 +47,7 @@ return function()
         {
           icon = "🖥️  ",
           desc = "Open Terminal                           ",
-          action = function()
-            vim.cmd.vnew()
-            vim.cmd.term()
-            vim.cmd.wincmd("J")
-            vim.api.nvim_win_set_height(0, 15)
-
-            job_id = vim.bo.channel
-          end,
+          action = "Floaterminal",
           key = "t",
         },
         {

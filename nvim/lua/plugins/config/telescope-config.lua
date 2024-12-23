@@ -40,7 +40,10 @@ return function()
       },
       live_grep = {
         theme = "ivy"
-      }
+      },
+      lsp_references = {
+        theme = "ivy"
+      },
     }
   }
   --require("telescope").load_extension("fzf")
