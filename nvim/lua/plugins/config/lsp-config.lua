@@ -8,8 +8,8 @@ return function()
     "tsserver",
     "csharp_ls",
     "angularls",
-    "sqlls"
   }
+
 
   require("mason").setup()
   require("mason-lspconfig").setup({

@@ -299,21 +299,22 @@ return {
       text = " ",
       hl = "fg_lavender",
     },
-    pending = {
-      text = " ",
-      hl = "fg_yellow",
-    },
     custom = {
-      {
+      { -- pending
         match_string = "p",
         text = " ",
         hl = "fg_yellow",
       },
-      {
-        match_string = "~",
+      { -- In progress
+        match_string = "i",
         text = "󰪢 ",
         hl = "fg_red",
         scope_hl = nil,
+      },
+      { -- Denied
+        match_string = "-",
+        text = " ",
+        hl = "fg_red",
       }
     },
   },

@@ -43,7 +43,6 @@ vim.keymap.set("n", "<leader>F", "<CMD>lua require('conform').format({ lsp_fallb
   { desc = "Format code" })
 
 -- File explorer
-vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "File explorer" })
 vim.keymap.set("n", "<leader>d", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<leader>td", "<CMD>tabnew | Oil<CR>", { desc = "Open Oil in new tab" })
 vim.keymap.set("n", "<leader>wdx", "<CMD>vsplit | Oil<CR>", { desc = "Split window vertically and open Oil" })
@@ -114,7 +113,8 @@ vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", s
 vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
 
 -- Term
-vim.api.nvim_set_keymap('t', '<C-q>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ft", "<CMD>Floaterminal<CR>", { desc = "Open float terminal" })
 vim.keymap.set("n", "<leader>st", function()
   vim.cmd.vnew()
   vim.cmd.term()
