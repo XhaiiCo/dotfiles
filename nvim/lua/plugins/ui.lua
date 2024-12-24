@@ -60,4 +60,23 @@ return {
     event = 'VimEnter',
     config = require("plugins.config.dashboard-config")
   },
+  {
+    "brenoprata10/nvim-highlight-colors",
+    event = "BufRead",
+    config = function()
+      require("nvim-highlight-colors").setup({
+        render = "background",
+        virtual_symbol = "  ",
+        enable_tailwind = true,
+      })
+    end,
+  },
+  { -- Color of CursorLine and CursorLineNr.
+    'svampkorg/moody.nvim',
+    event = { 'ModeChanged', 'BufWinEnter', 'WinEnter' },
+    dependencies = {
+      'kevinhwang91/nvim-ufo',
+    },
+    opts = require("plugins.config.moody-config")
+  }
 }

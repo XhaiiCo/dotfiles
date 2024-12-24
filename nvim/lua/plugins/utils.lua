@@ -38,17 +38,6 @@ return {
     "szw/vim-maximizer"
   },
   {
-    "brenoprata10/nvim-highlight-colors",
-    event = "BufRead",
-    config = function()
-      require("nvim-highlight-colors").setup({
-        render = "background",
-        virtual_symbol = "  ",
-        enable_tailwind = true,
-      })
-    end,
-  },
-  {
     "aznhe21/actions-preview.nvim",
     config = function()
       require("actions-preview").setup({
@@ -82,5 +71,12 @@ return {
     "folke/trouble.nvim",
     tag = "v2.10.0",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "aaronik/treewalker.nvim",
+    opts = {
+      highlight = true,
+      highlight_duration = 250,
+    }
   }
 }

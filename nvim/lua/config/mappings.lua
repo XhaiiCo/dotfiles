@@ -81,6 +81,12 @@ vim.keymap.set("n", "<down>", "<nop>", { silent = true })
 vim.keymap.set("n", "<left>", "<nop>", { silent = true })
 vim.keymap.set("n", "<right>", "<nop>", { silent = true })
 
+-- Treewalker
+vim.keymap.set({ 'n', 'v' }, '<A-k>', '<cmd>Treewalker Up<cr>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<A-j>', '<cmd>Treewalker Down<cr>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<A-l>', '<cmd>Treewalker Right<cr>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<A-h>', '<cmd>Treewalker Left<cr>', { silent = true })
+
 -- Remove macro key
 vim.keymap.set("n", "q", "<nop>", { silent = true })
 
@@ -114,7 +120,7 @@ vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", s
 vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
 
 -- Term
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>ft", "<CMD>Floaterminal<CR>", { desc = "Open float terminal" })
 vim.keymap.set("n", "<leader>st", function()
   vim.cmd.vnew()
