@@ -8,6 +8,7 @@ return function()
     "tsserver",
     "csharp_ls",
     "angularls",
+    "lemminx",
   }
 
 

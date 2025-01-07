@@ -78,5 +78,12 @@ return {
       'kevinhwang91/nvim-ufo',
     },
     opts = require("plugins.config.moody-config")
-  }
+  },
+  {
+    "b0o/incline.nvim",
+    dependencies = {},
+    event = "BufReadPre",
+    priority = 1200,
+    config = require("plugins.config.incline-config"),
+  },
 }

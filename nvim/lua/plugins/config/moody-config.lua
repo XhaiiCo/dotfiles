@@ -11,9 +11,10 @@ return {
     terminal_n = 0.2,
   },
   colors = {
-    normal = '#EB788B',
+    normal = '#4CD4BD',
     insert = '#FF8F40',
-    visual = '#4CD4BD',
+    --visual = '#4CD4BD',
+    visual = '#EB788B',
     replace = '#00BBCC',
     command = '#EB788B',
     operator = '#FF8F40',

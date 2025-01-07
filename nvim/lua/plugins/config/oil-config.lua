@@ -35,6 +35,7 @@ return {
         ".vscode",
         ".gitignore",
         ".editorconfig",
+        ".vs",
         ".."
       }
 
