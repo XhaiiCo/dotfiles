@@ -33,8 +33,8 @@ vim.keymap.set('n', '<leader>pi', '<cmd>lua require("goto-preview").goto_preview
 vim.keymap.set('n', '<leader>pc', '<cmd>lua require("goto-preview").close_all_win()<CR>',
   { desc = "Close Previews", silent = true })
 
--- Toggle maximizer
-vim.keymap.set("n", "<leader>m", "<CMD>MaximizerToggle<CR>", { desc = "Toggle maximizer" })
+-- Maxime window
+vim.keymap.set("n", "<leader>m", "<CMD>WindowsMaximize<CR>", { desc = "Maximize window" })
 
 -- Toggle markview
 vim.keymap.set('n', '<leader>em', "<CMD>:Markview toggleAll<CR>", { desc = "Toggle Markview preview" })
@@ -51,6 +51,9 @@ vim.keymap.set("n", "<leader>wdy", "<CMD>split | Oil<CR>", { desc = "Split windo
 
 -- Lazygit
 vim.keymap.set("n", "<leader>gg", "<CMD>LazyGit<CR>", { desc = "Open LazyGit" })
+
+-- Dooing
+vim.keymap.set("n", "<leader>tl", "<CMD>Dooing<CR>", { desc = "Open Dooing" })
 
 -- Telescope
 local builtin = require("telescope.builtin")

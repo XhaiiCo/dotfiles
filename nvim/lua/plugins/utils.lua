@@ -35,9 +35,6 @@ return {
     end,
   },
   {
-    "szw/vim-maximizer"
-  },
-  {
     "aznhe21/actions-preview.nvim",
     config = function()
       require("actions-preview").setup({
@@ -78,5 +75,12 @@ return {
       highlight = true,
       highlight_duration = 250,
     }
+  },
+  {
+    "atiladefreitas/dooing",
+    config = function()
+      require("dooing").setup({
+      })
+    end,
   }
 }
