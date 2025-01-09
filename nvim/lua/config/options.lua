@@ -37,10 +37,14 @@ set.guicursor = {
 }
 
 -- Set the shell to powershell
-set.shell = 'powershell'                                                       -- Set the default shell to PowerShell
+set.shell = 'powershell'                                    -- Set the default shell to PowerShell
 set.shellcmdflag =
-'-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'                    -- Configure PowerShell to run without a logo, profile, and restrict script execution policy
-set.shellquote = ''                                                            -- No additional quoting needed for shell commands
-set.shellpipe = '| Out-File -Encoding UTF8 %s'                                 -- Configure how shell output is piped into Neovim, using UTF-8 encoding
-set.shellredir = '| Out-File -Encoding UTF8 %s'                                -- Configure how shell output is redirected, using UTF-8 encoding
-set.shellxquote = ''                                                           -- No special quoting for commands passed to the shell
+'-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command' -- Configure PowerShell to run without a logo, profile, and restrict script execution policy
+set.shellquote =
+''                                                          -- No additional quoting needed for shell commands
+set.shellpipe =
+'| Out-File -Encoding UTF8 %s'                              -- Configure how shell output is piped into Neovim, using UTF-8 encoding
+set.shellredir =
+'| Out-File -Encoding UTF8 %s'                              -- Configure how shell output is redirected, using UTF-8 encoding
+set.shellxquote =
+''                                                          -- No special quoting for commands passed to the shell

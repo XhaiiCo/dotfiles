@@ -40,7 +40,7 @@ vim.keymap.set("n", "<leader>m", "<CMD>WindowsMaximize<CR>", { desc = "Maximize 
 vim.keymap.set('n', '<leader>em', "<CMD>:Markview toggleAll<CR>", { desc = "Toggle Markview preview" })
 
 -- Format file
-vim.keymap.set("n", "<leader>F", "<CMD>lua require('conform').format({ lsp_fallback = true, async = true })<CR>",
+vim.keymap.set("n", "<leader>F", "<CMD>lua require('conform').format({ lsp_fallback = false, async = true })<CR>",
   { desc = "Format code" })
 
 -- File explorer
