@@ -8,7 +8,6 @@ vim.keymap.set(
 -- LSP
 vim.keymap.set("n", "Q", vim.lsp.buf.hover, { desc = "Hover", buffer = buffer })
 vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { desc = "Go to type definition", buffer = buffer })
-vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = buffer })
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { silent = true })
 vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { silent = true })
 --vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { silent = true })
@@ -17,7 +16,7 @@ vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { silent 
 vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true })
 
 -- Code action
-vim.keymap.set({ "v", "n" }, "ca", require("actions-preview").code_actions)
+vim.keymap.set({ "v", "n" }, "<leader>ca", require("actions-preview").code_actions)
 
 -- Quickfix
 vim.keymap.set("n", "<M-j>", "<CMD>cnext<CR>", { desc = "Open quickfix" })
@@ -74,10 +73,9 @@ vim.keymap.set("n", "<leader>fo", function()
 end, { silent = true })
 
 -- Trouble
-vim.keymap.set("n", "<leader>tr", "<CMD>TroubleToggle<CR>", { desc = "Toggle trouble", silent = true })
-vim.keymap.set("n", "<leader>ta", "<CMD>TroubleToggle workspace_diagnostics<CR>",
-  { desc = "Toggle trouble global", silent = true })
-vim.keymap.set("n", "<leader>tf", "<CMD>TroubleToggle quickfix<CR>", { desc = "Fix with trouble", silent = true })
+vim.keymap.set("n", "<leader>tr", function()
+  require("trouble").toggle({ mode = "document_diagnostics" })
+end, { desc = "Toggle Trouble (current file only)", silent = true })
 
 vim.keymap.set("n", "<up>", "<nop>", { silent = true })
 vim.keymap.set("n", "<down>", "<nop>", { silent = true })

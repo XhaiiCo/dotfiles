@@ -20,6 +20,7 @@ return {
     --php = { "phpcbf", "php-cs-fixer" },
     html = { "prettierd" },
     css = { "prettierd" },
+    scss = { "prettierd" },
     xml = { "prettierd" },
     sql = { "prettierd" },
   },
