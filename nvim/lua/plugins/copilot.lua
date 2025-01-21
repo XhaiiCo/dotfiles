@@ -20,9 +20,9 @@ local prompts = {
 }
 
 return {
-  {
-    "github/copilot.vim",
-  },
+  -- {
+  --   "github/copilot.vim",
+  -- },
   {
     {
       "CopilotC-Nvim/CopilotChat.nvim",      -- Load the Copilot Chat plugin

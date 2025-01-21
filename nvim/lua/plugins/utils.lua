@@ -75,12 +75,5 @@ return {
       highlight = true,
       highlight_duration = 250,
     }
-  },
-  {
-    "atiladefreitas/dooing",
-    config = function()
-      require("dooing").setup({
-      })
-    end,
   }
 }

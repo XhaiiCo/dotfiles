@@ -51,9 +51,6 @@ vim.keymap.set("n", "<leader>wdy", "<CMD>split | Oil<CR>", { desc = "Split windo
 -- Lazygit
 vim.keymap.set("n", "<leader>gg", "<CMD>LazyGit<CR>", { desc = "Open LazyGit" })
 
--- Dooing
-vim.keymap.set("n", "<leader>tl", "<CMD>Dooing<CR>", { desc = "Open Dooing" })
-
 -- Telescope
 local builtin = require("telescope.builtin")
 
