@@ -98,5 +98,12 @@ return {
       vim.o.equalalways = false
       require('windows').setup()
     end
+  },
+  {-- Cursor animation
+    "sphamba/smear-cursor.nvim",
+    opts = {
+      cursor_color = "none",
+      hide_target_hack = true
+    },
   }
 }
