@@ -119,16 +119,14 @@ vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", 
 
 -- Term
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>', { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ft", "<CMD>Floaterminal<CR>", { desc = "Open float terminal" })
-vim.keymap.set("n", "<leader>st", function()
+vim.keymap.set("n", "<leader>TF", "<CMD>Floaterminal<CR>", { desc = "Open float terminal" })
+vim.keymap.set("n", "<leader>TS", function()
   vim.cmd.vnew()
   vim.cmd.term()
   vim.cmd.wincmd("J")
   vim.api.nvim_win_set_height(0, 15)
-
-  job_id = vim.bo.channel
 end)
 
-vim.keymap.set("n", "<leader>tngs", function()
-  vim.fn.chansend(job_id, { "ng serve --open\r\n" })
+vim.keymap.set("n", "<leader>TT", function()
+  vim.cmd.term()
 end)

@@ -47,7 +47,9 @@ return function()
         {
           icon = "🖥️  ",
           desc = "Open Terminal                           ",
-          action = "Floaterminal",
+          action = function()
+                    vim.cmd.term()
+                  end,
           key = "t",
         },
         {
