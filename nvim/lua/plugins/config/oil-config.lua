@@ -26,6 +26,8 @@ return {
     ["g."] = "actions.toggle_hidden",
   },
   view_options = {
+    number = true,
+    relativenumber = true,
     show_hidden = true,
     is_always_hidden = function(name, _)
       local hidden_dirs = {
