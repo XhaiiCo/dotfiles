@@ -75,5 +75,5 @@ return {
       highlight = true,
       highlight_duration = 250,
     }
-  }
+  },
 }
