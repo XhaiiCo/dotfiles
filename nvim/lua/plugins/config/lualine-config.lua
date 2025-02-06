@@ -29,10 +29,6 @@ local conditions = {
   end,
 }
 
--- Transparent lualine
-local custom_gruvbox = require("lualine.themes.gruvbox")
-custom_gruvbox.normal.c.bg = "NONE"
-
 -- Config
 local config = {
   options = {
@@ -59,7 +55,8 @@ local config = {
         "lazygit",
       },
     },
-    theme = custom_gruvbox,
+    theme = 'auto',
+    globalstatus = true
   },
   sections = {
     -- these are to remove the defaults
@@ -313,6 +310,12 @@ ins_right({
   "fancy_filetype",
   ts_icon = "",
   color = { fg = colors.mint, bg = "none" },
+})
+
+
+table.insert(config.sections.lualine_z, {
+  function() return os.date('%H:%M:%S') end,
+  color = { fg = colors.blue, bg = "none" }
 })
 
 return config
