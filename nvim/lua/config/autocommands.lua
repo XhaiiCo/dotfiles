@@ -1,5 +1,3 @@
-vim.cmd.colorscheme("catppuccin-macchiato")
-
 -- Highlight when yanking
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = "Highlight yank",
@@ -63,3 +61,17 @@ vim.cmd("TSEnable highlight")
 
 -- hide virtual text from diagnostics
 vim.diagnostic.config({ virtual_text = false })
+
+-- highlights all occurrences of the word under the cursor
+vim.api.nvim_create_autocmd("CursorMoved", {
+  pattern = "*",
+  callback = function()
+    local word = vim.fn.expand("<cword>")
+    if word ~= "" then
+      local escaped_word = vim.fn.escape(word, "\\/.*$^~[]")
+      vim.cmd("match Search /\\V\\<" .. escaped_word .. "\\>/")
+    else
+      vim.cmd("match none")
+    end
+  end
+})

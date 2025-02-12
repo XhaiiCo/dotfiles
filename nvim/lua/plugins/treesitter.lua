@@ -22,6 +22,8 @@ return {
           "php",
           "xml"
         },
+        fold = { enabled = false},
+
         -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = false,
 

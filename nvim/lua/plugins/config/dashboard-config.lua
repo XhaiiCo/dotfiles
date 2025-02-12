@@ -48,8 +48,8 @@ return function()
           icon = "🖥️  ",
           desc = "Open Terminal                           ",
           action = function()
-                    vim.cmd.term()
-                  end,
+            vim.cmd.term()
+          end,
           key = "t",
         },
         {
