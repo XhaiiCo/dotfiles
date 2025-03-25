@@ -98,5 +98,5 @@ return {
       cursor_color = "none",
       hide_target_hack = true
     },
-  }
+  },
 }

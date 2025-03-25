@@ -1,6 +1,5 @@
 local set = vim.opt
 
-
 set.shiftwidth = 2 -- Number of space for tab
 set.autoread = true -- Read a file when it was changed outside of nvim
 set.autowrite = true -- Automatically write file when it was changed
