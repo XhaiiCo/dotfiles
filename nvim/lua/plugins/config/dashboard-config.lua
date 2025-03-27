@@ -139,7 +139,9 @@ local function week_header()
 
   local tbl = {}
 
-  -- Insert date and time
+  for _ = 1, 7 do 
+    table.insert(tbl, '')
+  end
   table.insert(tbl,'╭──────────────────────────────────────────────────────────────────────────────╮')
   table.insert(tbl, os.date('│ ⟫⟫⟫                     󰃭 %d-%m-%Y | 󰥔 %H:%M:%S                        ⟪⟪⟪ │'))
   table.insert(tbl,'╰──────────────────────────────────────────────────────────────────────────────╯')
@@ -148,6 +150,8 @@ local function week_header()
   for _, value in ipairs(weekly_tiles[day]) do
     table.insert(tbl, value)
   end
+  table.insert(tbl, '')
+
   return tbl
 end
 

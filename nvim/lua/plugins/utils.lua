@@ -75,6 +75,11 @@ return {
       highlight = true,
       highlight_duration = 250,
     }
+  },
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    opts = {}
   }
 }
 

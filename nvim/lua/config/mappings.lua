@@ -105,6 +105,12 @@ vim.keymap.set("n", "<S-Down>", "<CMD>resize -2<CR>", { desc = "Decrease window 
 vim.keymap.set("n", "<S-Left>", "<CMD>vertical resize -2<CR>", { desc = "Decrease window width", silent = true })
 vim.keymap.set("n", "<S-Right>", "<CMD>vertical resize +2<CR>", { desc = "Increase window width", silent = true })
 
+-- Persistence
+vim.keymap.set("n", "<leader>qs", function() require("persistence").load() end, { desc = "Load the session for the current directory" })
+vim.keymap.set("n", "<leader>qS", function() require("persistence").select() end, { desc = "Select a session to load"})
+vim.keymap.set("n", "<leader>ql", function() require("persistence").load({ last = true }) end, { desc = "Load the last session"})
+vim.keymap.set("n", "<leader>qd", function() require("persistence").stop() end, { desc = "Stop Persistence => session won't be saved on exit"})
+
 -- Others
 vim.keymap.set("n", "<leader>wy", "<C-W>s", { desc = "Split window below", silent = true })
 vim.keymap.set("n", "<leader>wx", "<C-W>v", { desc = "Split window right", silent = true })

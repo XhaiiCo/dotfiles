@@ -1,3 +1,5 @@
+return { }
+
 -- local prompts = {
 --   Explain = "Please explain how the following code works.",                                                                                                                                      -- Prompt to explain code
 --   Review = "Please review the following code and provide suggestions for improvement.",                                                                                                          -- Prompt to review code
@@ -117,4 +119,3 @@
 --   }
 -- }
 --
-return {}
