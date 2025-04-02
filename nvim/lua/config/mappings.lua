@@ -122,6 +122,21 @@ vim.keymap.set("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next buffer", silent 
 vim.keymap.set("n", "<S-j>", "<cmd>-tabmove<cr>", { desc = "Move tab to left", silent = true, noremap = true })
 vim.keymap.set("n", "<S-k>", "<cmd>+tabmove<cr>", { desc = "Move tab to right", silent = true })
 
+-- grug-far
+vim.keymap.set("n", "<leader>sr",
+        function()
+          local grug = require 'grug-far'
+          local ext = vim.bo.buftype == '' and vim.fn.expand '%:e'
+          grug.open {
+            transient = true,
+            prefills = {
+              filesFilter = ext and ext ~= '' and '*.' .. ext or nil,
+            },
+          }
+        end,
+        {desc = 'Search and Replace'}
+      )
+
 -- Term
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>TF", "<CMD>Floaterminal<CR>", { desc = "Open float terminal" })

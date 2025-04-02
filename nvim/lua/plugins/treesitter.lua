@@ -22,7 +22,7 @@ return {
           "php",
           "xml"
         },
-        fold = { enabled = false},
+        fold = { enabled = true},
 
         -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = false,
@@ -55,6 +55,17 @@ return {
         indent = { enabled = true },
         autotag = { enabled = true },
       }
+
+      vim.opt.foldmethod = "expr"
+      vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+      vim.o.foldenable = true
+      vim.o.foldlevel = 99
+      vim.o.foldmethod = "expr"
+      vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      vim.o.foldtext = ""
+      vim.opt.foldcolumn = "0"
+      vim.opt.fillchars:append({fold = " "})
     end
   },
   { -- Use treesitter to autoclose and autorename html tag

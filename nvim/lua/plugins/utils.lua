@@ -80,6 +80,33 @@ return {
     "folke/persistence.nvim",
     event = "BufReadPre",
     opts = {}
+  },
+  {-- Find and Replace
+    'MagicDuck/grug-far.nvim',
+    opts = { headerMaxWidth = 80 },
+    cmd = 'GrugFar',
+  },
+  {
+    'nat-418/boole.nvim',
+    event = 'BufEnter',
+    opts = {
+      mappings = {
+        increment = '<C-a>',
+        decrement = '<C-x>',
+      },
+      additions = {
+        { 'production', 'development', 'test', 'sandbox' },
+        { 'around', 'between' },
+        { 'let', 'const' },
+        { 'start', 'end' },
+        { 'import', 'export' },
+        { 'before', 'after' },
+        { 'plus', 'minus' },
+        { 'smart', 'truncate' },
+        { 'left', 'right' },
+        { 'is', 'are' },
+      },
+    },
   }
 }
 
